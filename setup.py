@@ -32,7 +32,7 @@ readme.append('')
 software_licence = readfile("LICENSE")
 
 
-requires = []
+requires = ['opencmiss.exporter']
 
 setup(
     name='sparc-converter',
