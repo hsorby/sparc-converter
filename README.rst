@@ -40,4 +40,4 @@ Example
 
 ::
 
- sparc-convert web-gl <path-to-argon-file>/CubeSquareLine.neon -o webgl
+  sparc-convert web-gl <path-to-argon-file>/CubeSquareLine.neon -o webgl
