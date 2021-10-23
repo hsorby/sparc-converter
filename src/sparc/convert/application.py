@@ -8,6 +8,7 @@ from opencmiss.exporter.webgl import ArgonSceneExporter
 def process_arguments():
     parser = argparse.ArgumentParser(description="Convert SPARC data.")
     subparsers = parser.add_subparsers(help='Choose a command', dest='command_name')
+    subparsers.required = True
     web_gl_parser = subparsers.add_parser('web-gl', help='export to WebGL')
     web_gl_parser.set_defaults(action=lambda: 'web-gl')
     web_gl_parser.add_argument('-p', '--prefix', help='set web-gl output prefix')
@@ -27,7 +28,8 @@ def main():
         sys.exit(1)
 
     if args.command_name == 'web-gl':
-        exporter = ArgonSceneExporter(args.argon_doc, args.output_dir, args.prefix)
+        exporter = ArgonSceneExporter(args.output_dir, args.prefix)
+        exporter.load(args.argon_doc)
         exporter.export()
     else:
         sys.exit(2)
