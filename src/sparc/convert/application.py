@@ -2,7 +2,7 @@ import argparse
 import os.path
 import sys
 
-from opencmiss.exporter.webgl import ArgonSceneExporter
+from cmlibs.exporter.webgl import ArgonSceneExporter
 
 
 def process_arguments():
