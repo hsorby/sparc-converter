@@ -2,7 +2,7 @@ import io
 import os
 import re
 
-from setuptools import setup, find_packages
+from setuptools import setup, find_namespace_packages
 
 
 here = os.path.abspath(os.path.dirname(__file__))
@@ -46,7 +46,7 @@ setup(
     url='https://github.com/hsorby/sparc-converter.git',
     license='Apache Software License',
     license_files=("LICENSE",),
-    packages=find_packages("src"),
+    packages=find_namespace_packages("src"),
     package_dir={"": "src"},
     entry_points={
         "console_scripts": [
